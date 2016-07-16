@@ -14,6 +14,16 @@ body, md-content {
   color: white; }
   .material-icons.md-light.md-inactive {
     color: rgba(255, 255, 255, 0.3); }
+.material-icons.md-16 {
+  font-size: 16px; }
+.material-icons.md-18 {
+  font-size: 18px; }
+.material-icons.md-24 {
+  font-size: 24px; }
+.material-icons.md-36 {
+  font-size: 36px; }
+.material-icons.md-48 {
+  font-size: 48px; }
 
 .shadow-1 {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -21,10 +31,6 @@ body, md-content {
 
 .shadow-2 {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
-
-.shadow-2-hover:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
 .shadow-3 {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
@@ -56,14 +62,29 @@ body, md-content {
       .content .current-reading .card-content .card-content-title {
         font-size: 28px;
         font-weight: bold; }
-      .content .current-reading .card-content .card-content-description span {
-        color: #828282; }
-      .content .current-reading .card-content .card-content-description p {
-        text-align: justify;
-        line-height: 25px; }
+      .content .current-reading .card-content .card-content-description {
+        margin-bottom: 10px; }
+        .content .current-reading .card-content .card-content-description span {
+          color: #828282; }
+        .content .current-reading .card-content .card-content-description p {
+          text-align: justify;
+          line-height: 25px; }
       .content .current-reading .card-content .card-content-actions .card-content-actions-progress {
         color: #828282; }
       .content .current-reading .card-content .card-content-actions button {
         margin: 0; }
+  .content .card-small {
+    text-align: center; }
+    .content .card-small img {
+      max-width: 200px;
+      height: 212px; }
+    .content .card-small .card-small-primary {
+      font-size: 20px; }
+    .content .card-small .card-small-secondary {
+      color: #838383; }
+    .content .card-small .card-small-third {
+      color: #949494; }
+      .content .card-small .card-small-third div {
+        margin-left: 5px; }
 
 /*# sourceMappingURL=styles.css.map */

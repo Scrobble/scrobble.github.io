@@ -39,12 +39,12 @@
 			</md-toolbar>
 
 			<div class="container content">
-				<div layout="row" layout-xs="column">
+				<div layout="row" layout-sm="column" layout-xs="column">
 					<div flex>
 						<h3 class="title-section">Leitura atual</h3>
 						<md-card class="current-reading" layout="row" layout-xs="column">
 							<div class="cover">
-								<img class="shadow-2 shadow-2-hover" src="images/capaanimaisfantasticos.jpg">
+								<img class="shadow-2" src="images/capaanimaisfantasticos.jpg">
 							</div>
 							<div class="card-content" layout="column" layout-align="space-between stretch">
 								<div class="card-content-title">Animais Fantásticos e Onde Habitam</div>
@@ -54,29 +54,44 @@
 										A acromântula é uma aranha monstruosa de oito olhos e dotada tde fala humana, foi desenvolvida pelos bruxos para guardar suas casas ou tesouros...
 									</p>
 								</div>
-								<div class="card-content-actions" layout="row" layout-align="space-between center">
+								<div class="card-content-actions" layout="row" layout-align="space-between center" hide-xs="true">
 									<div class="card-content-actions-progress">10/64 (16%)</div>
 									<md-button>Atualizar progresso</md-button>
 								</div>
 							</div>
 						</md-card>
 					</div>
-					<div flex layout="column">
+					<div flex>
 						<h3 class="title-section">Atividades recentes</h3>
-						<md-card>
-							<md-card-title>
-								<md-card-title-text>
-									<span class="md-headline">Animais Fantásticos e Onde Habitam</span>
-								</md-card-title-text>
-							</md-card-title>
-						</md-card>
-						<md-card>
-							<md-card-title>
-								<md-card-title-text>
-									<span class="md-headline">Animais Fantásticos e Onde Habitam</span>
-								</md-card-title-text>
-							</md-card-title>
-						</md-card>
+						<div layout="row">
+							<md-card class="card-small">
+								<img src="images/finding-dory.jpg">
+								<div class="card-small-primary">Procurando Dory</div>
+								<div class="card-small-secondary">Animação</div>
+								<div layout="row" layout-align="center" class="card-small-third">
+									<i class="material-icons md-16">star</i>
+									<div>4.5</div>
+								</div>
+							</md-card>
+							<md-card class="card-small">
+								<img src="images/anno-2205.jpg">
+								<div class="card-small-primary">Anno 2205</div>
+								<div class="card-small-secondary">Ubisoft</div>
+								<div layout="row" layout-align="center" class="card-small-third">
+									<i class="material-icons md-16">star</i>
+									<div>4.5</div>
+								</div>
+							</md-card>
+							<md-card class="card-small" hide-xs="true">
+								<img src="images/2001.jpg">
+								<div class="card-small-primary">2001</div>
+								<div class="card-small-secondary">Arthur C. Clark</div>
+								<div layout="row" layout-align="center" class="card-small-third">
+									<i class="material-icons md-16">star</i>
+									<div>4.5</div>
+								</div>
+							</md-card>
+						</div>
 					</div>
 				</div>
 			</div>
