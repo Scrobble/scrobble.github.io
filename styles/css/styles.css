@@ -41,50 +41,113 @@ body, md-content {
 .shadow-5 {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
 
-.content {
-  margin-top: 35px; }
-  .content .title-section {
-    margin: 0 8px; }
-  .content .current-reading {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/fantastic-beasts.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #FFF;
-    padding-top: 30px;
-    border-left: 10px solid #e53935; }
-    .content .current-reading .cover {
-      margin: 10px;
-      margin-right: 0; }
-      .content .current-reading .cover img {
-        width: 160px; }
-    .content .current-reading .card-content {
-      margin: 0 10px; }
-      .content .current-reading .card-content .card-content-title {
-        font-size: 28px;
-        font-weight: bold; }
-      .content .current-reading .card-content .card-content-description {
-        margin-bottom: 10px; }
-        .content .current-reading .card-content .card-content-description span {
-          color: #828282; }
-        .content .current-reading .card-content .card-content-description p {
-          text-align: justify;
-          line-height: 25px; }
-      .content .current-reading .card-content .card-content-actions .card-content-actions-progress {
-        color: #828282; }
-      .content .current-reading .card-content .card-content-actions button {
-        margin: 0; }
-  .content .card-small {
-    text-align: center; }
-    .content .card-small img {
-      max-width: 200px;
-      height: 212px; }
-    .content .card-small .card-small-primary {
-      font-size: 20px; }
-    .content .card-small .card-small-secondary {
-      color: #838383; }
-    .content .card-small .card-small-third {
-      color: #949494; }
-      .content .card-small .card-small-third div {
-        margin-left: 5px; }
+md-card {
+  margin: 0; }
+
+.content .title-section {
+  margin: 0 8px;
+  margin-top: 35px;
+  font-size: 24px;
+  font-weight: 300; }
+.content .current-reading {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/fantastic-beasts.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #FFF;
+  padding-top: 48px; }
+  .content .current-reading .cover {
+    margin: 10px;
+    margin-right: 0; }
+    .content .current-reading .cover img {
+      width: 160px; }
+  .content .current-reading .card-content {
+    margin: 10px;
+    margin-top: 0; }
+    .content .current-reading .card-content .card-content-title {
+      font-size: 28px;
+      font-weight: bold; }
+    .content .current-reading .card-content .card-content-description span {
+      color: #828282; }
+    .content .current-reading .card-content .card-content-description p {
+      text-align: justify;
+      line-height: 25px; }
+    .content .current-reading .card-content .card-content-actions .card-content-actions-progress {
+      color: #828282; }
+    .content .current-reading .card-content .card-content-actions button {
+      margin: 0; }
+.content .recent-activities {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../images/2001.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #FFF;
+  padding-top: 48px; }
+  .content .recent-activities .card-content {
+    width: 100%; }
+    .content .recent-activities .card-content .card-content-title {
+      font-size: 28px;
+      font-weight: 200;
+      text-align: center;
+      margin-bottom: 30px; }
+    .content .recent-activities .card-content .card-content-covers {
+      display: flex;
+      margin: 0 auto;
+      max-width: 100%; }
+      .content .recent-activities .card-content .card-content-covers .card-content-cover-01 {
+        background-image: url("../../images/anno-2205.jpg");
+        background-size: cover;
+        width: 150px;
+        height: 151px;
+        margin-top: 30px;
+        position: relative;
+        left: 30px;
+        box-shadow: 0 -19px 38px rgba(0, 0, 0, 0.3), 0 -15px 12px rgba(0, 0, 0, 0.22); }
+      .content .recent-activities .card-content .card-content-covers .card-content-cover-02 {
+        background-image: url("../../images/finding-dory.jpg");
+        background-size: cover;
+        width: 150px;
+        height: 181px;
+        position: relative;
+        z-index: 10;
+        box-shadow: 0 -19px 38px rgba(0, 0, 0, 0.3), 0 -15px 12px rgba(0, 0, 0, 0.22); }
+      .content .recent-activities .card-content .card-content-covers .card-content-cover-03 {
+        background-image: url("../../images/2001.jpg");
+        background-size: cover;
+        width: 150px;
+        height: 151px;
+        margin-top: 30px;
+        position: relative;
+        right: 30px;
+        box-shadow: 0 -19px 38px rgba(0, 0, 0, 0.3), 0 -15px 12px rgba(0, 0, 0, 0.22); }
+.content .card-small {
+  text-align: center; }
+  .content .card-small img {
+    width: auto;
+    height: 230px; }
+  .content .card-small .user {
+    display: flex;
+    background-color: #F4F4F4; }
+    .content .card-small .user .user-picture {
+      margin: 10px; }
+      .content .card-small .user .user-picture img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%; }
+    .content .card-small .user .user-data {
+      margin-top: 13px;
+      text-align: left; }
+      .content .card-small .user .user-data .user-data-name {
+        font-size: 11px; }
+  .content .card-small .card-small-primary {
+    font-size: 20px; }
+  .content .card-small .card-small-secondary {
+    color: #838383; }
+  .content .card-small .card-small-third {
+    color: #949494; }
+    .content .card-small .card-small-third div {
+      margin-left: 5px; }
+
+.col-md-6,
+.col-xs-6 {
+  margin-bottom: 10px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,5 @@
+$screen-sm-min: 768px;
+
 * {
 	margin: 0;
 	padding: 0;
@@ -51,11 +53,17 @@ body, md-content {
 	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
-.content {
-	margin-top: 35px;
+md-card {
+	margin: 0;
+}
 
+.content {
 	.title-section {
 		margin: 0 8px;
+		margin-top: 35px;
+
+		font-size: 24px;
+		font-weight: 300;
 	}
 
 	.current-reading {
@@ -64,9 +72,9 @@ body, md-content {
 		background-position: center;
 		color: #FFF;
 
-		padding-top: 30px;
+		padding-top: 48px;
 
-		border-left: 10px solid #e53935;
+		//border-left: 10px solid #e53935;
 
 		.cover {
 			margin: 10px;
@@ -78,7 +86,8 @@ body, md-content {
 		}
 
 		.card-content {
-			margin: 0 10px;
+			margin: 10px;
+			margin-top: 0;
 
 			.card-content-title {
 				font-size: 28px;
@@ -86,8 +95,6 @@ body, md-content {
 			}
 
 			.card-content-description {
-				margin-bottom: 10px;
-
 				span {
 					color: #828282;
 				}
@@ -110,12 +117,108 @@ body, md-content {
 		}
 	}
 
+	.recent-activities {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../images/2001.jpg');
+		background-size: cover;
+		background-position: center;
+		color: #FFF;
+
+		padding-top: 48px;
+
+		.card-content {
+			width: 100%;
+
+			.card-content-title {
+				font-size: 28px;
+				font-weight: 200;
+				text-align: center;
+
+				margin-bottom: 30px;
+			}
+
+			.card-content-covers {
+				display: flex;
+				margin: 0 auto;
+
+				max-width: 100%;
+
+				.card-content-cover-01 {
+					background-image: url('../../images/anno-2205.jpg');
+					background-size: cover;
+
+					width: 150px;
+					height: 151px;
+
+					margin-top: 30px;
+
+					position: relative;
+					left: 30px;
+
+					box-shadow: 0 -19px 38px rgba(0,0,0,0.30), 0 -15px 12px rgba(0,0,0,0.22);
+				}
+
+				.card-content-cover-02 {
+					background-image: url('../../images/finding-dory.jpg');
+					background-size: cover;
+
+					width: 150px;
+					height: 181px;
+
+					position: relative;
+					z-index: 10;
+
+					box-shadow: 0 -19px 38px rgba(0,0,0,0.30), 0 -15px 12px rgba(0,0,0,0.22);
+				}
+
+				.card-content-cover-03 {
+					background-image: url('../../images/2001.jpg');
+					background-size: cover;
+
+					width: 150px;
+					height: 151px;
+
+					margin-top: 30px;
+
+					position: relative;
+					right: 30px;
+
+					box-shadow: 0 -19px 38px rgba(0,0,0,0.30), 0 -15px 12px rgba(0,0,0,0.22);
+				}
+			}
+		}
+	}
+
 	.card-small {
 		text-align: center;
 
 		img {
-			max-width: 200px;
-			height: 212px;
+			width: auto;
+			height: 230px;
+		}
+
+		.user {
+			display: flex;
+			background-color: #F4F4F4;
+
+			.user-picture {
+				margin: 10px;
+
+				img {
+					width: 40px;
+					height: 40px;
+
+					border-radius: 50%;
+				}
+			}
+
+			.user-data {
+				margin-top: 13px;
+				text-align: left;
+
+				.user-data-name {
+					font-size: 11px;
+				}
+			}
 		}
 
 		.card-small-primary {
@@ -134,4 +237,9 @@ body, md-content {
 			}
 		}
 	}
+}
+
+.col-md-6,
+.col-xs-6 {
+	margin-bottom: 10px;
 }

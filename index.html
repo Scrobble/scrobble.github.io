@@ -19,13 +19,64 @@
 			var app = angular.module('Scrobble', ['ngMaterial']);
 			app.config(function($mdThemingProvider) {
 				$mdThemingProvider.theme('default').primaryPalette('grey').accentPalette('orange');
-			})
+			});
+			app.controller('MainController', function ($scope) {
+				$scope.sliders = [
+					{
+						image: 'images/finding-dory.jpg',
+						name: 'Procurando Dory',
+						type: 'Animação',
+						rate: 4.5
+					}, {
+						image: 'images/anno-2205.jpg',
+						name: 'Anno 2205',
+						type: 'Ubisoft',
+						rate: 4.5
+					}, {
+						image: 'images/finding-dory.jpg',
+						name: 'Procurando Dory',
+						type: 'Animação',
+						rate: 4.5
+					}, {
+						image: 'images/anno-2205.jpg',
+						name: 'Anno 2205',
+						type: 'Ubisoft',
+						rate: 4.5
+					}, {
+						image: 'images/finding-dory.jpg',
+						name: 'Procurando Dory',
+						type: 'Animação',
+						rate: 4.5
+					}, {
+						image: 'images/finding-dory.jpg',
+						name: 'Procurando Dory',
+						type: 'Animação',
+						rate: 4.5
+					}
+				];
+
+				$scope.slider = function (index) {
+					var divWidth = document.querySelectorAll(".friends-slider")[0].clientWidth;
+
+					console.log(divWidth);
+
+					if (divWidth >= 1140) {
+						return false;
+					} else {
+						if (index < parseInt(divWidth / 210)) {
+							return false;
+						} else {
+							return true;
+						}
+					}
+				}
+			});
 		</script>
 
 		<link rel="stylesheet" type="text/css" href="./styles/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="./styles/css/styles.css">
 	</head>
-	<body>
+	<body ng-controller="MainController">
 		<md-content>
 			<md-toolbar class="md-hue-2 ">
 				<div class="md-toolbar-tools">
@@ -39,9 +90,11 @@
 			</md-toolbar>
 
 			<div class="container content">
-				<div layout="row" layout-sm="column" layout-xs="column">
-					<div flex>
-						<h3 class="title-section">Leitura atual</h3>
+				<div class="row">
+					<div class="col-md-6"><div class="title-section">Leitura atual</div></div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
 						<md-card class="current-reading" layout="row" layout-xs="column">
 							<div class="cover">
 								<img class="shadow-2" src="images/capaanimaisfantasticos.jpg">
@@ -54,44 +107,49 @@
 										A acromântula é uma aranha monstruosa de oito olhos e dotada tde fala humana, foi desenvolvida pelos bruxos para guardar suas casas ou tesouros...
 									</p>
 								</div>
-								<div class="card-content-actions" layout="row" layout-align="space-between center" hide-xs="true">
+								<div class="card-content-actions" layout="row" layout-md="column" layout-align="space-between center" hide-xs="true">
 									<div class="card-content-actions-progress">10/64 (16%)</div>
 									<md-button>Atualizar progresso</md-button>
 								</div>
 							</div>
 						</md-card>
 					</div>
-					<div flex>
-						<h3 class="title-section">Atividades recentes</h3>
-						<div layout="row">
-							<md-card class="card-small">
-								<img src="images/finding-dory.jpg">
-								<div class="card-small-primary">Procurando Dory</div>
-								<div class="card-small-secondary">Animação</div>
-								<div layout="row" layout-align="center" class="card-small-third">
-									<i class="material-icons md-16">star</i>
-									<div>4.5</div>
+					<div class="col-md-6 col-sm-12">
+						<md-card class="recent-activities" layout="row" layout-xs="column">
+							<div class="card-content" layout="column" layout-align="space-between stretch">
+								<div class="card-content-title">Atividades recentes</div>
+								<div class="card-content-covers">
+									<div class="card-content-cover-01"></div>
+									<div class="card-content-cover-02"></div>
+									<div class="card-content-cover-03"></div>
 								</div>
-							</md-card>
-							<md-card class="card-small">
-								<img src="images/anno-2205.jpg">
-								<div class="card-small-primary">Anno 2205</div>
-								<div class="card-small-secondary">Ubisoft</div>
-								<div layout="row" layout-align="center" class="card-small-third">
-									<i class="material-icons md-16">star</i>
-									<div>4.5</div>
+							</div>
+						</md-card>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="title-section">Atividades dos seus amigos</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2 col-sm-4 col-xs-6" ng-repeat="s in sliders">
+						<md-card class="card-small">
+							<div class="user">
+								<div class="user-picture"><img src="images/users/paulo-menezes.jpg"></div>
+								<div class="user-data">
+									<div class="user-data-name">Paulo Menezes</div>
+									<div class="user-data-status">Ja viu</div>
 								</div>
-							</md-card>
-							<md-card class="card-small" hide-xs="true">
-								<img src="images/2001.jpg">
-								<div class="card-small-primary">2001</div>
-								<div class="card-small-secondary">Arthur C. Clark</div>
-								<div layout="row" layout-align="center" class="card-small-third">
-									<i class="material-icons md-16">star</i>
-									<div>4.5</div>
-								</div>
-							</md-card>
-						</div>
+							</div>
+							<img src="images/finding-dory.jpg">
+							<div class="card-small-primary">Procurando Dory</div>
+							<div class="card-small-secondary">Animação</div>
+							<div layout="row" layout-align="center" class="card-small-third">
+								<i class="material-icons md-16">star</i>
+								<div>4.5</div>
+							</div>
+						</md-card>
 					</div>
 				</div>
 			</div>
