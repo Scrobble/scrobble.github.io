@@ -1,0 +1,66 @@
+<div class="container content">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="title-section">Leitura atual</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<md-card class="current-reading" layout="row" layout-xs="column">
+				<div class="cover">
+					<img class="shadow-2" src="images/capaanimaisfantasticos.jpg">
+				</div>
+				<div class="card-content" layout="column" layout-align="space-between stretch">
+					<div class="card-content-title">Animais Fantásticos e Onde Habitam</div>
+					<div class="card-content-description">
+						<span>de J.K. Rowling</span>
+						<p>
+							A acromântula é uma aranha monstruosa de oito olhos e dotada tde fala humana, foi desenvolvida pelos bruxos para guardar suas casas ou tesouros...
+						</p>
+					</div>
+					<div class="card-content-actions" layout="row" layout-md="column" layout-align="space-between center" hide-xs="true">
+						<div class="card-content-actions-progress">10/64 (16%)</div>
+						<md-button>Atualizar progresso</md-button>
+					</div>
+				</div>
+			</md-card>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<md-card class="recent-activities" layout="row" layout-xs="column">
+				<div class="card-content" layout="column" layout-align="space-between stretch">
+					<div class="card-content-title">Atividades recentes</div>
+					<div class="card-content-covers">
+						<div class="card-content-cover-01"></div>
+						<div class="card-content-cover-02"></div>
+						<div class="card-content-cover-03"></div>
+					</div>
+				</div>
+			</md-card>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="title-section">Atividades dos seus amigos</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2 col-sm-4 col-xs-6" ng-repeat="s in sliders">
+			<md-card class="card-small">
+				<div class="user">
+					<div class="user-picture"><img src="images/users/paulo-menezes.jpg"></div>
+					<div class="user-data">
+						<div class="user-data-name">Paulo Menezes</div>
+						<div class="user-data-status">Ja viu</div>
+					</div>
+				</div>
+				<img src="images/finding-dory.jpg">
+				<div class="card-small-primary">Procurando Dory</div>
+				<div class="card-small-secondary">Animação</div>
+				<div layout="row" layout-align="center" class="card-small-third">
+					<i class="material-icons md-16">star</i>
+					<div>4.5</div>
+				</div>
+			</md-card>
+		</div>
+	</div>
+</div>

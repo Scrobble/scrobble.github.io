@@ -14,71 +14,19 @@
 		<script src="./bower_components/angular-animate/angular-animate.js" type="text/javascript" ></script>
 		<script src="./bower_components/angular-aria/angular-aria.js" type="text/javascript" ></script>
 		<script src="./bower_components/angular-material/angular-material.js" type="text/javascript" ></script>
+		<script src="./bower_components/angular-route/angular-route.min.js" type="text/javascript" ></script>
 
-		<script type="text/javascript">
-			var app = angular.module('Scrobble', ['ngMaterial']);
-			app.config(function($mdThemingProvider) {
-				$mdThemingProvider.theme('default').primaryPalette('grey').accentPalette('orange');
-			});
-			app.controller('MainController', function ($scope) {
-				$scope.sliders = [
-					{
-						image: 'images/finding-dory.jpg',
-						name: 'Procurando Dory',
-						type: 'Animação',
-						rate: 4.5
-					}, {
-						image: 'images/anno-2205.jpg',
-						name: 'Anno 2205',
-						type: 'Ubisoft',
-						rate: 4.5
-					}, {
-						image: 'images/finding-dory.jpg',
-						name: 'Procurando Dory',
-						type: 'Animação',
-						rate: 4.5
-					}, {
-						image: 'images/anno-2205.jpg',
-						name: 'Anno 2205',
-						type: 'Ubisoft',
-						rate: 4.5
-					}, {
-						image: 'images/finding-dory.jpg',
-						name: 'Procurando Dory',
-						type: 'Animação',
-						rate: 4.5
-					}, {
-						image: 'images/finding-dory.jpg',
-						name: 'Procurando Dory',
-						type: 'Animação',
-						rate: 4.5
-					}
-				];
-
-				$scope.slider = function (index) {
-					var divWidth = document.querySelectorAll(".friends-slider")[0].clientWidth;
-
-					console.log(divWidth);
-
-					if (divWidth >= 1140) {
-						return false;
-					} else {
-						if (index < parseInt(divWidth / 210)) {
-							return false;
-						} else {
-							return true;
-						}
-					}
-				}
-			});
-		</script>
+		<script type="text/javascript" src="./scripts/app.js"></script>
+		<script type="text/javascript" src="./scripts/controllers/MainController.js"></script>
+		<script type="text/javascript" src="./scripts/controllers/DialogSignController.js"></script>
+		<script type="text/javascript" src="./scripts/controllers/ToolbarController.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="./styles/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="./styles/css/styles.css">
 	</head>
-	<body ng-controller="MainController">
+	<body>
 		<md-content>
-			<md-toolbar class="md-hue-2 ">
+			<md-toolbar class="md-hue-2" ng-controller="ToolbarController">
 				<div class="md-toolbar-tools">
 					<md-button class="md-icon-button" aria-label="Menu">
 						<i class="material-icons md-light">menu</i>
@@ -86,73 +34,17 @@
 					<h2>
 						<span>Scrobble</span>
 					</h2>
+					<span flex></span>
+					<md-button ng-click="signIn(this)" aria-label="Entrar">
+						Entrar
+					</md-button>
+					<md-button ng-click="signUp(this)" aria-label="Criar conta">
+						Criar conta
+					</md-button>
 				</div>
 			</md-toolbar>
 
-			<div class="container content">
-				<div class="row">
-					<div class="col-md-6"><div class="title-section">Leitura atual</div></div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 col-sm-12">
-						<md-card class="current-reading" layout="row" layout-xs="column">
-							<div class="cover">
-								<img class="shadow-2" src="images/capaanimaisfantasticos.jpg">
-							</div>
-							<div class="card-content" layout="column" layout-align="space-between stretch">
-								<div class="card-content-title">Animais Fantásticos e Onde Habitam</div>
-								<div class="card-content-description">
-									<span>de J.K. Rowling</span>
-									<p>
-										A acromântula é uma aranha monstruosa de oito olhos e dotada tde fala humana, foi desenvolvida pelos bruxos para guardar suas casas ou tesouros...
-									</p>
-								</div>
-								<div class="card-content-actions" layout="row" layout-md="column" layout-align="space-between center" hide-xs="true">
-									<div class="card-content-actions-progress">10/64 (16%)</div>
-									<md-button>Atualizar progresso</md-button>
-								</div>
-							</div>
-						</md-card>
-					</div>
-					<div class="col-md-6 col-sm-12">
-						<md-card class="recent-activities" layout="row" layout-xs="column">
-							<div class="card-content" layout="column" layout-align="space-between stretch">
-								<div class="card-content-title">Atividades recentes</div>
-								<div class="card-content-covers">
-									<div class="card-content-cover-01"></div>
-									<div class="card-content-cover-02"></div>
-									<div class="card-content-cover-03"></div>
-								</div>
-							</div>
-						</md-card>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="title-section">Atividades dos seus amigos</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-2 col-sm-4 col-xs-6" ng-repeat="s in sliders">
-						<md-card class="card-small">
-							<div class="user">
-								<div class="user-picture"><img src="images/users/paulo-menezes.jpg"></div>
-								<div class="user-data">
-									<div class="user-data-name">Paulo Menezes</div>
-									<div class="user-data-status">Ja viu</div>
-								</div>
-							</div>
-							<img src="images/finding-dory.jpg">
-							<div class="card-small-primary">Procurando Dory</div>
-							<div class="card-small-secondary">Animação</div>
-							<div layout="row" layout-align="center" class="card-small-third">
-								<i class="material-icons md-16">star</i>
-								<div>4.5</div>
-							</div>
-						</md-card>
-					</div>
-				</div>
-			</div>
+			<div ng-view></div>
 		</md-content>
 	</body>
 </html>
