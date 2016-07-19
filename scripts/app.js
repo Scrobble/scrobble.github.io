@@ -5,5 +5,8 @@ app.config(function($mdThemingProvider, $routeProvider, $locationProvider) {
 	$routeProvider.when('/', {
 		templateUrl: '../views/home.html',
 		controller: 'MainController'
+	}).when('/entrar', {
+		templateUrl: '../views/sign.html',
+		controller: 'SignController'
 	});
 });
