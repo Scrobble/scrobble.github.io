@@ -1,0 +1,49 @@
+.card-small {
+	text-align: center;
+
+	img {
+		width: auto;
+		height: 230px;
+	}
+
+	.user {
+		display: flex;
+		background-color: #F4F4F4;
+
+		.user-picture {
+			margin: 10px;
+
+			img {
+				width: 40px;
+				height: 40px;
+
+				border-radius: 50%;
+			}
+		}
+
+		.user-data {
+			margin-top: 13px;
+			text-align: left;
+
+			.user-data-name {
+				font-size: 11px;
+			}
+		}
+	}
+
+	.card-small-primary {
+		font-size: 20px;
+	}
+
+	.card-small-secondary {
+		color: #838383;
+	}
+
+	.card-small-third {
+		color: #949494;
+
+		div {
+			margin-left: 5px;
+		}
+	}
+}

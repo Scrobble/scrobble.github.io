@@ -1,0 +1,70 @@
+.recent-activities {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../images/2001.jpg');
+	background-size: cover;
+	background-position: center;
+	color: #FFF;
+
+	padding-top: 48px;
+
+	.card-content {
+		width: 100%;
+
+		.card-content-title {
+			font-size: 28px;
+			font-weight: 200;
+			text-align: center;
+
+			margin-bottom: 30px;
+		}
+
+		.card-content-covers {
+			display: flex;
+			margin: 0 auto;
+
+			max-width: 100%;
+
+			.card-content-cover-01 {
+				background-image: url('../../images/anno-2205.jpg');
+				background-size: cover;
+
+				width: 150px;
+				height: 151px;
+
+				margin-top: 30px;
+
+				position: relative;
+				left: 30px;
+
+				box-shadow: 0 -19px 38px rgba(0,0,0,0.30), 0 -15px 12px rgba(0,0,0,0.22);
+			}
+
+			.card-content-cover-02 {
+				background-image: url('../../images/finding-dory.jpg');
+				background-size: cover;
+
+				width: 150px;
+				height: 181px;
+
+				position: relative;
+				z-index: 10;
+
+				box-shadow: 0 -19px 38px rgba(0,0,0,0.30), 0 -15px 12px rgba(0,0,0,0.22);
+			}
+
+			.card-content-cover-03 {
+				background-image: url('../../images/2001.jpg');
+				background-size: cover;
+
+				width: 150px;
+				height: 151px;
+
+				margin-top: 30px;
+
+				position: relative;
+				right: 30px;
+
+				box-shadow: 0 -19px 38px rgba(0,0,0,0.30), 0 -15px 12px rgba(0,0,0,0.22);
+			}
+		}
+	}
+}

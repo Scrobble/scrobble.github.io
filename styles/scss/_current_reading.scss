@@ -1,0 +1,48 @@
+.current-reading {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../images/fantastic-beasts.jpg');
+	background-size: cover;
+	background-position: center;
+	color: #FFF;
+
+	padding-top: 48px;
+
+	.cover {
+		margin: 10px;
+		margin-right: 0;
+
+		img {
+			width: 160px;
+		}
+	}
+
+	.card-content {
+		margin: 10px;
+		margin-top: 0;
+
+		.card-content-title {
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.card-content-description {
+			span {
+				color: #828282;
+			}
+
+			p {
+				text-align: justify;
+				line-height: 25px;
+			}
+		}
+
+		.card-content-actions {
+			.card-content-actions-progress {
+				color: #828282;
+			}
+
+			button {
+				margin: 0;
+			}
+		}
+	}
+}

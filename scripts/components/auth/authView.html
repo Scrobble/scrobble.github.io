@@ -4,13 +4,17 @@
 			<md-card class="card-sign">
 				<div class="row row-buttons">
 					<div class="col-md-6">
-						<md-button class="md-raised md-primary btn-facebook">Entrar com Facebook</md-button>
+						<md-button class="md-raised md-primary btn-facebook" ng-click="facebook()">
+							Entrar com Facebook
+						</md-button>
 					</div>
 					<div class="col-md-6">
-						<md-button class="md-raised md-primary btn-twitter">Entrar com Twitter</md-button>
+						<md-button class="md-raised md-primary btn-google" ng-click="google()">
+							Entrar com Google+
+						</md-button>
 					</div>
 				</div>
-				<form name="signInForm">
+				<form name="signInForm" ng-submit="signIn()">
 					<div class="row">
 						<div class="col-md-12">
 							<h2>Entrar</h2>
@@ -36,7 +40,9 @@
 							<md-button class="md-primary btn-forget">Esqueci a senha</md-button>
 						</div>
 						<div class="col-md-6">
-							<md-button class="md-raised md-warn btn-signin" ng-disabled="signInForm.$invalid">Entrar</md-button>
+							<md-button type="submit" class="md-raised md-warn btn-signin" ng-disabled="signInForm.$invalid">
+								Entrar
+							</md-button>
 						</div>
 					</div>
 				</form>

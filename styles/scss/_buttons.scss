@@ -1,0 +1,50 @@
+.btn-facebook {
+	background-color: #3B5998 !important;
+	color: #FFF !important;
+
+	width: 100%;
+	margin: 0 !important;
+
+	&:before {
+		content: "\f231";
+		font-family: "Ionicons";
+		position: relative;
+		left: -10px;
+	}
+}
+
+.btn-google {
+	background-color: #DD4B39 !important;
+	color: #FFF !important;
+
+	width: 100%;
+	margin: 0 !important;
+
+	&:before {
+		content: "\f235";
+		font-family: "Ionicons";
+		position: relative;
+		left: -10px;
+	}
+}
+
+.btn-signin {
+	float: right;
+	margin-right: 0;
+	margin-bottom: 0;
+
+	padding: 0 30px !important;
+}
+
+.btn-forget {
+	margin-left: 0;
+	margin-bottom: 0;
+}
+
+.btn-signup {
+	float: right;
+	margin-right: 0;
+	margin-bottom: 10px;
+
+	padding: 0 30px !important;
+}
