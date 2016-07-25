@@ -11,6 +11,14 @@ var app = angular.module('Scrobble', ['ngMaterial', 'ngRoute', 'ngMessages', 'fi
 		}).when('/entrar', {
 			templateUrl: './scripts/components/auth/authView.html',
 			controller: 'AuthController'
+		}).when('/usuario', {
+			templateUrl: './scripts/components/user/userView.html',
+			controller: 'UserController',
+			resolve: {
+				"currentAuth": ["Auth", function(Auth) {
+					return Auth.$requireSignIn();
+				}]
+			}
 		});
 
 		var config = {
@@ -22,8 +30,14 @@ var app = angular.module('Scrobble', ['ngMaterial', 'ngRoute', 'ngMessages', 'fi
 		
 		firebase.initializeApp(config);
 	})
-	.run(function ($rootScope) {
+	.run(function ($rootScope, $location) {
 		$rootScope.$on('$routeChangeSuccess', function(e, current, pre) {
 			
+		});
+
+		$rootScope.$on("$routeChangeError", function(event, next, previous, error) {
+			if (error === "AUTH_REQUIRED") {
+				$location.path("/");
+			}
 		});
 	})

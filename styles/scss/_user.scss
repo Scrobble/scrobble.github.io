@@ -1,0 +1,122 @@
+.user-profile {
+	margin-top: 20px;
+
+	.cover {
+		width: 100%;
+		height: 200px;
+
+		background-image: url('../../images/game-of-thrones-bg.jpg');
+		background-size: cover;
+	}
+
+	.profile {
+		img {
+			width: 150px;
+			height: 150px;
+
+			border-radius: 50%;
+			border: 4px solid #FFF;
+
+			margin: 0 auto;
+			margin-top: -75px;
+		}
+	}
+
+	.name {
+		font-size: 26px;
+		font-weight: bold;
+
+		text-align: center;
+		text-transform: uppercase;
+
+		margin-top: 10px;
+	}
+
+	.friends {
+		text-align: center;
+		color: #BAC0C5;
+
+		margin-top: 10px;
+	}
+
+	.about {
+		width: 50%;
+		margin: 0 auto;
+
+		text-align: center;
+		color: #A5ABB0;
+
+		margin-top: 10px;
+	}
+
+	.tab-counter {
+		margin-top: 10px;
+
+		.col-md-2 {
+			text-align: center;
+
+			.big {
+				margin-top: 10px;
+				margin-bottom: 5px;
+
+				font-size: 20px;
+
+				color: #3B4A51;
+			}
+
+			.normal {
+				text-transform: uppercase;
+				margin-bottom: 10px;
+
+				color: #AAAFB6;
+			}
+		}
+	}
+}
+
+.services {
+	margin-top: 10px;
+	
+	.md-button {
+		width: 100%;
+		margin: 0;
+
+		i {
+			margin: 10px;
+		}
+
+		div {
+			margin-top: -10px;
+		}
+	}
+
+	.movies {
+		background-color: #e53935 !important;
+		color: #FFF !important;
+	}
+
+	.books {
+		background-color: #faa800 !important;
+		color: #FFF !important;
+	}
+
+	.games {
+		background-color: #4caf50 !important;
+		color: #FFF !important;
+	}
+
+	.hqs {
+		background-color: #1d87e4 !important;
+		color: #FFF !important;
+	}
+
+	.animes {
+		background-color: #7d57c1 !important;
+		color: #FFF !important;
+	}
+
+	.musics {
+		background-color: #660000 !important;
+		color: #FFF !important;
+	}
+}

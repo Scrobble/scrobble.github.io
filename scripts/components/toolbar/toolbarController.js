@@ -3,11 +3,21 @@ app.controller('ToolbarController', function ($rootScope, $scope, $location, Use
 
 	User.getUser(function (user) {
 		if (user) {
+			$scope.user = user;
+
 			$scope.logged = true;
 		} else {
 			$scope.logged = false;
 		}
-	})
+	});
+
+	$scope.home = function () {
+		$location.path('/');
+	}
+
+	$scope.profile = function () {
+		$location.path('/usuario');
+	}
 
 	$scope.signIn = function () {
 		$location.path('/entrar');

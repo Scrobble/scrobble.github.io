@@ -29,6 +29,7 @@
 		<script type="text/javascript" src="./scripts/components/toolbar/toolbarController.js"></script>
 		<!-- Pages -->
 		<script type="text/javascript" src="./scripts/components/home/homeController.js"></script>
+		<script type="text/javascript" src="./scripts/components/user/userController.js"></script>
 		<script type="text/javascript" src="./scripts/components/user/userService.js"></script>
 		<script type="text/javascript" src="./scripts/components/auth/authService.js"></script>
 		<script type="text/javascript" src="./scripts/components/auth/authController.js"></script>
@@ -43,7 +44,7 @@
 					<md-button class="md-icon-button" aria-label="Menu">
 						<i class="material-icons md-light">menu</i>
 					</md-button>
-					<h2>
+					<h2 ng-click="home()">
 						<span>Scrobble</span>
 					</h2>
 					<span flex></span>
@@ -53,6 +54,9 @@
 						</md-button>
 					</div>
 					<div ng-show="logged">
+						<md-button ng-click="profile()" aria-label="Sair">
+							{{ user.displayName }}
+						</md-button>
 						<md-button ng-click="loggout()" aria-label="Sair">
 							Sair
 						</md-button>

@@ -20,7 +20,7 @@
 							<h2>Entrar</h2>
 							<md-input-container class="md-block">
 								<label>E-mail</label>
-								<input ng-model="login.email" required name="email" type="email">
+								<input ng-model="login.email" ng-required="true" name="email" type="email">
 								<div ng-messages="signInForm.email.$error">
 									<div ng-message="email">Digite um e-mail válido</div>
 									<div ng-message="required">Campo obrigatório</div>
@@ -28,7 +28,7 @@
 							</md-input-container>
 							<md-input-container class="md-block">
 								<label>Senha</label>
-								<input ng-model="login.password" required name="password" type="password">
+								<input ng-model="login.password" ng-required="true" name="password" type="password">
 								<div ng-messages="signInForm.password.$error">
 									<div ng-message="required">Campo obrigatório</div>
 								</div>
@@ -56,14 +56,14 @@
 							<h2>Criar conta</h2>
 							<md-input-container class="md-block">
 								<label>Nome</label>
-								<input ng-model="user.name" required name="name" type="name">
+								<input ng-model="user.name" ng-required="true" name="name" type="name">
 								<div ng-messages="signUpForm.name.$error">
 									<div ng-message="required">Campo obrigatório</div>
 								</div>
 							</md-input-container>
 							<md-input-container class="md-block">
 								<label>E-mail</label>
-								<input ng-model="user.email" required name="email" type="email">
+								<input ng-model="user.email" ng-required="true" name="email" type="email">
 								<div ng-messages="signUpForm.email.$error">
 									<div ng-message="email">Digite um e-mail válido</div>
 									<div ng-message="required">Campo obrigatório</div>
@@ -71,7 +71,7 @@
 							</md-input-container>
 							<md-input-container class="md-block">
 								<label>Senha</label>
-								<input ng-model="user.password" required name="password" type="password">
+								<input ng-model="user.password" ng-required="true" name="password" type="password">
 								<div ng-messages="signUpForm.password.$error">
 									<div ng-message="required">Campo obrigatório</div>
 								</div>
