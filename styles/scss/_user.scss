@@ -50,10 +50,11 @@
 	}
 
 	.tab-counter {
-		margin-top: 10px;
+		margin-top: 20px;
 
 		.col-md-2 {
 			text-align: center;
+			margin-bottom: 0;
 
 			.big {
 				margin-top: 10px;
@@ -70,13 +71,19 @@
 
 				color: #AAAFB6;
 			}
+
+			&:hover {
+				cursor: pointer;
+
+				background-color: #EEE;
+			}
 		}
 	}
 }
 
 .services {
 	margin-top: 10px;
-	
+
 	.md-button {
 		width: 100%;
 		margin: 0;
@@ -89,34 +96,34 @@
 			margin-top: -10px;
 		}
 	}
+}
 
-	.movies {
-		background-color: #e53935 !important;
-		color: #FFF !important;
-	}
+.movies {
+	background-color: $movie-color !important;
+	color: #FFF !important;
+}
 
-	.books {
-		background-color: #faa800 !important;
-		color: #FFF !important;
-	}
+.books {
+	background-color: $books-color !important;
+	color: #FFF !important;
+}
 
-	.games {
-		background-color: #4caf50 !important;
-		color: #FFF !important;
-	}
+.games {
+	background-color: $games-color !important;
+	color: #FFF !important;
+}
 
-	.hqs {
-		background-color: #1d87e4 !important;
-		color: #FFF !important;
-	}
+.hqs {
+	background-color: $hqs-color !important;
+	color: #FFF !important;
+}
 
-	.animes {
-		background-color: #7d57c1 !important;
-		color: #FFF !important;
-	}
+.animes {
+	background-color: $animes-color !important;
+	color: #FFF !important;
+}
 
-	.musics {
-		background-color: #660000 !important;
-		color: #FFF !important;
-	}
+.musics {
+	background-color: $musics-color !important;
+	color: #FFF !important;
 }

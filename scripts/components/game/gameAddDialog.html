@@ -1,0 +1,31 @@
+<md-dialog aria-label="Conectar serviços - Jogos"  ng-cloak>
+	<form name="games">
+		<md-toolbar class="games">
+			<div class="md-toolbar-tools">
+				<h2>Conectar serviços - Jogos</h2>
+				<span flex></span>
+				<md-button class="md-icon-button" ng-click="cancel()">
+					<i class="material-icons">close</i>
+				</md-button>
+			</div>
+		</md-toolbar>
+		<md-dialog-content>
+			<div class="md-dialog-content">
+				<h2>Informe seu usuário do Steam para importar sua biblioteca</h2>
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Usuário Steam</label>
+					<input ng-model="steam.user" ng-required="true">
+				</md-input-container>
+			</div>
+		</md-dialog-content>
+		<md-dialog-actions layout="row">
+			<span flex></span>
+			<md-button ng-click="cancel()">
+				Cancelar
+			</md-button>
+			<md-button ng-click="continue()" ng-disabled="games.$invalid">
+				Continuar
+			</md-button>
+		</md-dialog-actions>
+	</form>
+</md-dialog>
