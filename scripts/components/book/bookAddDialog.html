@@ -1,0 +1,30 @@
+<md-dialog aria-label="Conectar serviços - Livros"  ng-cloak>
+	<form name="books">
+		<md-toolbar class="books">
+			<div class="md-toolbar-tools">
+				<h2>Conectar serviços - Livros</h2>
+				<span flex></span>
+				<md-button class="md-icon-button" ng-click="cancel()">
+					<i class="material-icons">close</i>
+				</md-button>
+			</div>
+		</md-toolbar>
+		<md-dialog-content>
+			<div class="md-dialog-content">
+				<h2>Conecte sua conta do Goodreads</h2>
+				<md-button class="md-raised md-primary books" ng-click="goodreads(this)">
+					<div>Conectar Goodreads</div>
+				</md-button>
+			</div>
+		</md-dialog-content>
+		<md-dialog-actions layout="row">
+			<span flex></span>
+			<md-button ng-click="cancel()">
+				Cancelar
+			</md-button>
+			<md-button ng-click="continue()" ng-disabled="books.$invalid">
+				Continuar
+			</md-button>
+		</md-dialog-actions>
+	</form>
+</md-dialog>

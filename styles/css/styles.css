@@ -259,11 +259,10 @@ md-content.game-of-thrones-bg {
   margin-top: 10px; }
   .services .md-button {
     width: 100%;
-    margin: 0; }
+    margin: 0;
+    line-height: 25px; }
     .services .md-button i {
       margin: 10px; }
-    .services .md-button div {
-      margin-top: -10px; }
 
 .movies {
   background-color: #e53935 !important;

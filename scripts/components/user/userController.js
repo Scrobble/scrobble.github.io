@@ -21,6 +21,24 @@ app.controller('UserController', function ($scope, $mdDialog, currentAuth) {
 			});
 	}
 
+	$scope.books = function (ev) {
+		$mdDialog.show({
+				controller: BookAddDialogController,
+				templateUrl: './scripts/components/book/bookAddDialog.html',
+				parent: angular.element(document.body),
+				targetEvent: ev,
+				clickOutsideToClose: true,
+				locals: {
+					user: currentAuth
+				}
+			})
+			.then(function() {
+				
+			}, function() {
+				
+			});
+	}
+
 	$scope.games = function (ev) {
 		$mdDialog.show({
 				controller: GameAddDialogController,
