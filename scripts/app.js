@@ -11,6 +11,9 @@ var app = angular.module('Scrobble', ['ngMaterial', 'ngRoute', 'ngMessages', 'fi
 		}).when('/entrar', {
 			templateUrl: './scripts/components/auth/authView.html',
 			controller: 'AuthController'
+		}).when('/auth/:type', {
+			templateUrl: './scripts/components/auth/authView.html',
+			controller: 'AuthDesktopController'
 		}).when('/usuario', {
 			templateUrl: './scripts/components/user/userView.html',
 			controller: 'UserController',
